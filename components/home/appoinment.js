@@ -88,8 +88,8 @@ const BookAppointment = () => {
   }
 
   return (
-    <section className='appointment px-4 pt-12 sm:pb-8 '>
-      <div className='container mx-auto'>
+    <section className='appointment section-spacing'>
+      <div className='page-container'>
         <h2 className='appointment__title h2 mb-5 xl:mb-[50px] text-center xl:text-left'>
           Book Appointment or call:
           <span className='text-accent-tertiary'>(+487 384 9452)</span>

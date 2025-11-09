@@ -2,6 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Layout System - Consistent spacing across all pages */
+@layer components {
+  .page-container {
+    @apply w-full mx-auto px-4 md:px-6 lg:px-8;
+    max-width: 1260px;
+  }
+
+  @media (min-width: 1360px) {
+    .page-container {
+      @apply px-0;
+    }
+  }
+
+  .section-spacing {
+    @apply py-8 md:py-12 lg:py-16;
+  }
+}
+
+/* Prevent image shaking and layout shifts during scroll */
+* {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+img, picture, video {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
 body {
     @apply text-secondary font-primary text-[17px] leading-8;
     font-family: "Inter", Arial, sans-serif;

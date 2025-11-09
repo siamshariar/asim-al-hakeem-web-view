@@ -75,8 +75,8 @@ useEffect(() => {
         qna_categories={qna_categories}
       />
 
-      <div className="container max-w-[1260px] mx-auto py-6 lg:py-12">
-        <div className="px-4 lg:px-0 mx-auto space-y-12">
+      <div className="page-container section-spacing">
+        <div className="mx-auto space-y-12">
           <section className="bg-white rounded-2xl shadow-xl p-8">
             <h1 className="text-4xl font-bold text-gray-800 mb-6">Counselling Session</h1>
             <p className="text-xl text-gray-600 mb-6">One-to-one Live Counseling with Sheikh Assim Al-Hakeem</p>

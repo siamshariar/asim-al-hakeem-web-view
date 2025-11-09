@@ -115,7 +115,7 @@ export default function Header2({
           </div>
         </div>
         
-        <div className="container mx-auto z-30 lg:relative items-center flex flex-col lg:flex-row justify-between gap-y-1 lg:gap-y-0">
+        <div className="page-container z-30 lg:relative items-center flex flex-col lg:flex-row justify-between gap-y-1 lg:gap-y-0">
           <div className="flex justify-center sm:hidden lg:block hidden mb-2 md:mb-2 lg:mb-5 items-center w-full lg:w-auto">
             <Link href="/">
               <Image src="/img/id/logo.png" alt="Logo" width={125} height={50} />
@@ -140,7 +140,8 @@ export default function Header2({
             <nav
               ref={desktopNavRef}
               
-              className="bg-white absolute px-[300px] scroll-down w-full left-0 -bottom-[68px] shadow-custom1 h-16 rounded-[10px] hidden lg:flex lg:items-center lg:justify-center transition-all duration-500"
+              className="bg-white absolute scroll-down w-full left-1/2 -translate-x-1/2 -bottom-[68px] shadow-custom1 h-16 rounded-[10px] hidden lg:flex lg:items-center lg:justify-center transition-all duration-500"
+              style={{ maxWidth: 'var(--max-content-width, 1260px)' }}
             >
               <ul className="flex text-[20px]">
                 <li>

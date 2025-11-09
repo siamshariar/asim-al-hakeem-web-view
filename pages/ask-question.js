@@ -20,9 +20,9 @@ export default function AskAQuestion({ playlists, headerLectures, qna_categories
 
       <Header2 playlists={playlists} lectures={headerLectures} qna_categories={qna_categories} />
 
-      <section className="bg-gray-50 min-h-screen py-6 lg:py-12">
-        <div className="container max-w-[1260px] mx-auto pb-10 ">
-          <div className="bg-white mx-4 shadow-xl lg:mx-0 rounded-2xl overflow-hidden">
+      <section className="bg-gray-50 min-h-screen section-spacing">
+        <div className="page-container">
+          <div className="bg-white shadow-xl rounded-2xl overflow-hidden">
             <div className="p-6 sm:p-10">
               <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">Ask a Question</h1>
               

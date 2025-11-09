@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Image from 'next/image';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 // Import Swiper and modules styles
 import 'swiper/css';
@@ -47,11 +48,17 @@ const TestimonialSlider = () => {
   }, []); // Empty dependency array ensures this runs once on mount
 
   return (
-    <section className="testimonials bg-testimonials bg-cover bg-right bg-no-repeat py-12">
-      <div className="testimonial__container container mx-auto">
+    <section className="testimonials bg-testimonials bg-cover bg-right bg-no-repeat bg-fixed section-spacing" style={{ backgroundAttachment: 'scroll' }}>
+      <div className="testimonial__container page-container">
         <div className="flex flex-col items-center gap-x-14 xl:flex-row w-full">
-          <div className="hidden xl:flex">
-            <img src="/img/verse/quran.png" alt="Quran" />
+          <div className="hidden xl:flex relative w-[300px] h-[300px]">
+            <Image 
+              src="/img/verse/quran.png" 
+              alt="Quran" 
+              fill
+              sizes="300px"
+              className="object-contain"
+            />
           </div>
 
           <div className="max-w-[98%] xl:max-w-[710px]">
@@ -61,25 +68,33 @@ const TestimonialSlider = () => {
                   <div key={testimonial.id} className="swiper-slide">
                     <div className="h-full flex flex-col justify-center items-start">
                       <div className="max-w-[680px] mx-auto text-center xl:text-left">
-                        <p
+                                                  <p
                           id={`quote-${testimonial.id}`}
                           className="font-light relative text-[34px] text-[#777F81] leading-[140%] lg:leading-[190%] text-center xl:text-left mb-7"
                         >
                           {/* Image Before Quote */}
-                          <img
-                            src="/img/bg/quote-left.svg" // Replace with your image path
-                            alt="Quote Icon Left"
-                            className="inline-block mb-3 w-10 h-6"
-                          />
+                          <span className="inline-block mb-3 w-10 h-6 relative">
+                            <Image
+                              src="/img/bg/quote-left.svg"
+                              alt="Quote Icon Left"
+                              width={40}
+                              height={24}
+                              className="inline-block"
+                            />
+                          </span>
 
                           <span className="mx-2 text-2xl  sm:text-3xl md:text-3xl text-center lg:text-3xl">{testimonial.quote}</span>
 
                           {/* Image After Quote */}
-                          <img
-                            src="/img/bg/quote-right.svg" // Replace with your image path
-                            alt="Quote Icon Right"
-                            className="inline-block mb-3 w-8 h-6"
-                          />
+                          <span className="inline-block mb-3 w-8 h-6 relative">
+                            <Image
+                              src="/img/bg/quote-right.svg"
+                              alt="Quote Icon Right"
+                              width={32}
+                              height={24}
+                              className="inline-block"
+                            />
+                          </span>
                         </p>
                         <div className="text-xl md:text-2xl lg:text-2xl center text-[#4c5354] font-semibold">{testimonial.name}</div>
                       </div>

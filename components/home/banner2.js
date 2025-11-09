@@ -1,10 +1,11 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Banner2 = () => {
   return (
-    <section className="bg-[#F4F4F4] py-12 px-6 xl:pt-12 xl:pb-0 overflow-hidden">
-      <div className="container mx-auto flex pt-[0px] flex-col-reverse lg:flex-row items-center  py-8 lg:py-10">
+    <section className="bg-[#F4F4F4] section-spacing overflow-hidden">
+      <div className="page-container flex pt-[0px] flex-col-reverse lg:flex-row items-center">
         {/* Left Section */}
         <div className="lg:w-1/2 text-center lg:text-left">
 
@@ -27,11 +28,14 @@ const Banner2 = () => {
         </div>
 
         {/* Right Section (Image) */}
-        <div className="lg:w-1/2 flex justify-center lg:justify-end mb-10 lg:mb-0">
-          <img
+        <div className="lg:w-1/2 flex justify-center lg:justify-end mb-10 lg:mb-0 relative w-full h-[300px] md:h-[400px] lg:h-[500px]">
+          <Image
             src="/img/profile-banner.png"
-            alt="Doctor"
-            className="w-4/4 object-cover"
+            alt="Sheikh Assim Alhakeem"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 630px"
+            className="object-contain"
+            priority
           />
         </div>
       </div>

@@ -46,17 +46,20 @@ export default function Contact({ playlists, headerLectures, qna_categories }) {
     <>
       <Meta title="Contact" description="Get in touch with our experts" />
       <Header2 playlists={playlists} headerLectures={headerLectures} qna_categories={qna_categories} />
-      <main className="container max-w-[1260px] mx-auto py-6 lg:py-12">
-        <div className="flex flex-col md:flex-row mx-4 lg:mx-0 bg-white shadow-lg rounded-lg overflow-hidden">
-          <div className="md:w-1/2 relative">
+      <main className="page-container section-spacing">
+        <div className="flex flex-col md:flex-row bg-white shadow-lg rounded-lg overflow-hidden">
+          <div className="md:w-1/2 relative min-h-[500px] md:min-h-[650px]">
             <div 
-              className="absolute inset-0 bg-cover bg-center z-0" 
-              style={{ backgroundImage: 'url(/img/contact/contact-img.png)' }}
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed z-0" 
+              style={{ 
+                backgroundImage: 'url(/img/contact/contact-img.png)',
+                backgroundAttachment: 'scroll'
+              }}
             ></div>
             <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
-            <div className="relative z-10 p-8 text-white">
-              <div className="mt-[520px]">
-                <p className="mt-2 text-white text-lg font-semibold">- Asim Al Hakeem</p>
+            <div className="relative z-10 p-8 text-white flex items-end h-full">
+              <div className="pb-8">
+                <p className="text-white text-lg font-semibold">- Asim Al Hakeem</p>
                 <p className="text-sm text-white">Islamic scholar, Jeddah</p>
               </div>
             </div>

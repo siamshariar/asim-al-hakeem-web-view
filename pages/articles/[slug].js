@@ -34,17 +34,20 @@ export default function ArticleDetail({ article, playlists, headerLectures, qnaC
         qna_categories={qnaCategories}
       />
 
-      <section className='article-detail mx-4 lg:mx-0 py-6 lg:py-12' >
-        <div className='container max-w-[1260px] p-6 bg-white rounded-xl shadow-xl mx-auto '>
+      <section className='article-detail section-spacing' >
+        <div className='page-container p-6 bg-white rounded-xl shadow-xl'>
           <h1 className='text-3xl pt-4 font-bold mb-6'>{article.title}</h1>
           <p className='text-lg text-[#0D9488] mb-6'>Published on {article.date}</p>
-          <Image
-            src={article.image}
-            alt={article.title}
-            width={800}
-            height={400}
-            className='w-full h-auto object-cover mb-6'
-          />
+          <div className="relative w-full mb-6 overflow-hidden rounded-lg" style={{ paddingTop: '50%' }}>
+            <Image
+              src={article.image}
+              alt={article.title}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1260px) 100vw, 1260px"
+              className='object-cover'
+              priority
+            />
+          </div>
           <div className='text-xl' >{article.description}</div>
 
           <div className="mt-8">

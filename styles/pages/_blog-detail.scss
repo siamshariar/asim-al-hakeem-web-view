@@ -426,10 +426,18 @@
 	position: relative;
 	border-radius: 1rem;
 	box-shadow: 0 10px 40px #1525426b;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
 }
 
 .book-detail-left img {
 	border-radius: 1rem;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
 }
 
 .book-detail-right {

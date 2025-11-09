@@ -37,10 +37,10 @@ export default function BookDetail({
 				qna_categories={qnaCategories}
 			/>
 
-			<section className=" blog-detail-ctn mt-0">
-				<div className=" py-6 lg:py-12">
-					<div className="container max-w-[1260px] mx-auto">
-						<div className="blog-area mx-4 lg:mx-0">
+			<section className="blog-detail-ctn mt-0">
+				<div className="section-spacing">
+					<div className="page-container">
+						<div className="blog-area">
 							<div className="blog-detail book-detail">
 								<div className="row margin-bottom-0">
 									<div className="col s12 l5">
@@ -49,11 +49,11 @@ export default function BookDetail({
 												<div className="book-detail-left-inner">
 													<Image
 														src={detail.imageSrc}
-														alt=""
+														alt={detail.bookName}
 														layout="fill"
 														objectFit="cover"
 														objectPosition="center center"
-														loading="eager"
+														priority
 														unoptimized
 													/>
 												</div>

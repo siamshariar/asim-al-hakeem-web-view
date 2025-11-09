@@ -1,9 +1,10 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export default function Banner() {
   return (
-    <section className="bg-[#F4F4F4] mt-10 py-20 xl:pt-12 xl:pb-0 overflow-hidden">
-      <div className="container mx-auto h-full">
+    <section className="bg-[#F4F4F4] mt-10 section-spacing overflow-hidden">
+      <div className="page-container h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between h-full">
           <div className="xl:w-[50%] text-center xl:text-left">
             
@@ -24,8 +25,15 @@ export default function Banner() {
 
           </div>
 
-          <div className="hero__img hidden xl:flex max-w-[814px] self-end">
-            <img src="/img/profile-banner.png" alt="Profile Banner" />
+          <div className="hero__img hidden xl:flex max-w-[814px] self-end relative w-full h-[500px]">
+            <Image 
+              src="/img/profile-banner.png" 
+              alt="Sheikh Assim Alhakeem" 
+              fill
+              sizes="814px"
+              className="object-contain"
+              priority
+            />
           </div>
         </div>
       </div>
